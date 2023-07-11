@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    /*cor principal*/
+    --Bright-orange:hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    /*neutras*/
+    --transparent-white:hsla(0, 0%, 100%, 0.75); /*paragrafos*/
+    --Very-light-gray:hsl(0, 0%, 95%); /*background,headings, buttons*/
+    /*fontes*/
+    --Fonte-Titulo:'Big Shoulders Display', cursive;
+    --Fonte-texto:'Lexend Deca', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--Fonte-texto);
+    color: white;
+    font-size: 14px;
+}
+
+.Carros{
+    display: flex;
+}
+
+.caixa__carros{
+    padding: 3.5em 2em;
+    width: 200px;
+}
+
+.sedans{
+    background-color: var(--Bright-orange);
+    border-radius: 10px 0 0 10px;
+}
+
+.suvs{
+    background-color: var(--Dark-cyan);
+}
+
+.luxury{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+
+.carro__imagem{
+    margin: 0 0 1.5em;
+}
+
+.titulo__carros{
+    font-family: var(--Fonte-Titulo);
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: var(--Very-light-gray);
+}
+
+.texto__carros{
+    margin: 2em 0 7em;
+    color: var(--transparent-white);
+}
+
+.botao{
+    text-decoration: none;
+    background-color: white;
+    padding: 0.7em 2em;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.botao:hover{
+    background-color: transparent;
+    color: white;
+}
+
+.botao__sedan{
+    color: var(--Bright-orange);
+}
+
+.botao__suv{
+    color: var(--Dark-cyan);
+}
+
+.botao__luxury{
+    color: var(--Very-dark-cyan);
+}
+
+@media screen and (max-width: 764px){
+    .conteiner{
+        margin: 100px 0;
+    }
+
+    .Carros{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 30px;
+    }
+
+    .caixa__carros{
+        padding:3em;
+        width: 200px;
+    }
+
+    .sedans{
+        border-radius: 10px 10px 0 0;
+    }
+
+    .luxury{
+        border-radius: 0 0 10px 10px;
+    }
+
+    .titulo__carros{
+        margin: 0.7em 0;
+    }
+
+    .texto__carros{
+        margin: 0 0 2em;
+    }
+
+    .carro__imagem{
+        margin: 0;
+    }
+}
